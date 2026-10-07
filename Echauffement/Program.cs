@@ -20,6 +20,7 @@ class Program
         string age = Console.ReadLine();
         int age1 = Convert.ToInt32(age);
         // Etape 3 : affichez soit "tu es majeur", soit "Tu es mineur" dépendant de l'âge fourni par l'utilisateur
+        bool isUnderage = age1 < 18;
         {
             if (age1 >= 18)
             {
@@ -48,56 +49,57 @@ class Program
             // Etape 7a : vérifiez si l'utilisateur a assez d'argent par rapport à la somme qu'il avait rentré à l'étape 4
                 if (weaponChoice == 1)
                 {
-                    float price = 25.0f
-                    if (money < price)
+                float price = 25.0f;
+                    if (money < price) 
                     {
                         Console.WriteLine("Tu n'as pas assez d'argent pour acheter ça");
                     }
                     else
                     {
-                    Console.WriteLine("Félicitation! Tu as maintenant Larry");
+                    money = money - price;
+                    Console.WriteLine("Félicitation! Tu as maintenant Larry. Il te reste désormais " + money + " euros");
                     }
 
-                } 
-            esle if (weaponChoice == 2)
+                }
+            else if (weaponChoice == 2)
                 {
-                     float price = 15.0f
+                float price = 15.0f;
                     if (money < price)
                     {
                         Console.WriteLine("Tu n'as pas assez d'argent pour acheter ça");
                     }
                     else
                     {
-                    Console.WriteLine("Félicitation! Tu as maintenant Oupi Goupi");
+                    Console.WriteLine("Félicitation! Tu as maintenant Oupi Goupi ! Il te reste désormais " + money + " euros");
                     }
                 }
-             esle if (weaponChoice == 3)
+             else if (weaponChoice == 3)
                 {
-                   float price = 10.0f
+                float price = 10.0f;
                     if (money < price)
                     {
                         Console.WriteLine("Tu n'as pas assez d'argent pour acheter ça");
                     }
                     else
                     {
-                    Console.WriteLine("Félicitation! Tu as maintenant L'électricien");
+                    Console.WriteLine("Félicitation! Tu as maintenant L'électricien Il te reste désormais " + money + " euros");
                     }
                 }
-             esle if (weaponChoice == 4)
+             else if (weaponChoice == 4)
                 {
-                    float price = 100.0f
+                float price = 100.0f;
                     if (money < price)
                     {
                         Console.WriteLine("Tu n'as pas assez d'argent pour acheter ça");
                     }
                     else
                     {
-                    Console.WriteLine("Félicitation! Tu as maintenant Le Malicieux");
+                    Console.WriteLine("Félicitation! Tu as maintenant Le Malicieux Il te reste désormais " + money + " euros");
                     }
                 }
             else 
             {
-                Console.WriteLine("Entre un chiffre valide s'il te plait")
+                Console.WriteLine("Entre un chiffre valide s'il te plait");
             }
             // Etape 7b : modifiez l'étape 7a pour ajouter un connecteur logique qui vérifie que l'utilisateur est majeur en plus d'avoir assez d'argent
             // Lorsque l'utilisateur respecte ces demandes, retirez le prix de l'arme de l'argent de l'utilisateur, puis confirmez à l'utilisateur que l'action a été effectuée 
